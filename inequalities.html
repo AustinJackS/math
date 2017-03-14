@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="1000" height="1000"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+<script>
+var vr=prompt("variable:");
+var op=prompt("operation:");
+var n2=prompt("number:");
+var ans=prompt("number after = :");
+var org=vr+" "+op+" "+n2+" = ";
+var org2=vr+" = ";
+invr={'+':'-','-':'+','x':'/','/':'*','*':'/'};
+inv=invr[op];
+invert=inv+n2;
+final=eval(ans+inv+n2);
+</script>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText(org,10,50);
+ctx.fillText(ans,300,50);
+ctx.fillText("|",200,100);
+ctx.fillText("|",200,100);
+ctx.fillText(invert,50,100);
+ctx.fillText(invert,300,100);
+ctx.fillText(org2,50,200);
+ctx.fillText(final,300,200);
+</script>
+
+</body>
+</html>
